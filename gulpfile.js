@@ -1,0 +1,61 @@
+var gulp = require('gulp'),
+  less = require('gulp-less'),
+  minifycss = require('gulp-minify-css'),
+  concat = require('gulp-concat'),
+  rename = require('gulp-rename');
+
+var cssPathArr = ['src/css/*.css', 'src/less/*.less'];
+
+function css () {
+  gulp.src(cssPathArr)
+    .pipe(less())
+    .pipe(concat('ezui.css'))
+    .pipe(gulp.dest('dist/css'));
+
+  gulp.src(cssPathArr)
+    .pipe(less())
+    .pipe(concat('ezui.css'))
+    .pipe(minifycss())
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest('dist/css'));
+}
+
+function js () { }
+
+/* 编译css */
+gulp.task('css', function () {
+  css();
+});
+
+gulp.task('build', function () {
+  css();
+});
+
+function watch() {
+  css();
+
+  const watcher = gulp.watch(cssPathArr);
+
+  watcher.on('change', function (path, stats) {
+    console.log(`File ${path} was changed`);
+    css();
+  });
+
+  watcher.on('add', function (path, stats) {
+    css();
+    console.log(`File ${path} was added`);
+  });
+
+  watcher.on('unlink', function (path, stats) {
+    console.log(`File ${path} was removed`);
+    css();
+  });
+}
+
+gulp.task('watch', function () {
+  watch();
+});
+
+gulp.task('default', function() {
+  watch();
+});

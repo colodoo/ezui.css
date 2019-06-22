@@ -1,0 +1,74 @@
+.ezui-dlg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .ezui-dlg__inner {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
+    border: 1px solid rgba(0, 0, 0, .1);
+
+    .ezui-dlg__title {
+      padding: 0 80px 0 20px;
+      height: 42px;
+      line-height: 42px;
+      border-bottom: 1px solid #eee;
+      font-size: 14px;
+      color: #333;
+      overflow: hidden;
+      background-color: #F8F8F8;
+      border-radius: 2px 2px 0 0;
+      cursor: move;
+    }
+
+    .ezui-dlg__centent {
+      flex: 1;
+      background-color: #eee;
+    }
+
+    .ezui-dlg__btn {
+      text-align: right;
+      pointer-events: auto;
+      user-select: none;
+      -webkit-user-select: none;
+      background-color: #ffffff;
+    }
+
+    &.ezui-dlg--active {
+      animation: scale-in 0.8s;
+    }
+
+    &.ezui-dlg--remove {
+      animation: scale-out 0.8s;
+    }
+
+  }
+
+}
+
+//缩放动画
+@keyframes scale-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-out {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
