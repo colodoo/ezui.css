@@ -1,3 +1,5 @@
+@import url("./variables.less");
+
 .ezui-btn {
   display: inline-block;
   vertical-align: middle;
@@ -15,7 +17,7 @@
   border-style: none;
   border-color: initial;
   border-image: initial;
-  border-radius: 2px;
+  // border-radius: 2px;
 
   // 类型相关
   &.ezui-btn__warm {
@@ -25,15 +27,15 @@
 
   &.ezui-btn__info {}
 
-  &.ezui-btn__error {
-    background-color: #FF5722;
+  &.ezui-btn__danger {
+    background-color: @danger !important;
     color: #ffffff;
   }
 
   // 尺寸相关
   &.ezui-btn__xs {
-    padding: 0px 12px !important;
-    font-size: 9px !important;
+    padding: 0px 14px !important;
+    font-size: 12px !important;
     height: 24px !important;
     line-height: 24px !important;
   }
