@@ -479,13 +479,6 @@ template {
 button {
   outline: 0;
 }
-html,
-body {
-  margin: 0px;
-  padding: 0px;
-  height: 100%;
-  width: 100%;
-}
 
 .ezui-p8 {
   padding: 8px;
