@@ -26,7 +26,7 @@
 | .ezui-col |    平分    |
 
 DEMO：
-```css
+```html
 <div class="ezui-row">
   <div class="ezui-col">.ezui-col</div>
   <div class="ezui-col">.ezui-col</div>
@@ -44,7 +44,7 @@ DEMO：
 | .ezui-layout__footer  |    底部    |
 
 DEMO：
-```css
+```html
 <body class="ezui-layout">
   <div class="ezui-layout__header">.ezui-layout__header</div>
   <div class="ezui-layout__content">.ezui-layout__content</div>
