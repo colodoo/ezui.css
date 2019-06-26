@@ -23,13 +23,25 @@
 | :--------:  | :-----:  |
 | .ezui-row | 行 |
 | .ezui-col-* |   均分为12块，可输入1-12   |
+| .ezui-gutter-* |   8，16；控制行间距   |
 | .ezui-col |    平分    |
 
-DEMO：
 ```html
 <div class="ezui-row">
   <div class="ezui-col">.ezui-col</div>
   <div class="ezui-col">.ezui-col</div>
+</div>
+```
+
+#### 网格间距
+```html
+<div class="ezui-row ezui-gutter-8">
+  <div class="ezui-col-6">
+    <div class="ezui-col__inner">.eaui-col-6</div>
+  </div>
+  <div class="ezui-col-6">
+    <div class="ezui-col__inner">.eaui-col-6</div>
+  </div>
 </div>
 ```
 
@@ -43,7 +55,6 @@ DEMO：
 | .ezui-layout__content | 主体部分，自动撑满高度  |
 | .ezui-layout__footer  |    底部    |
 
-DEMO：
 ```html
 <body class="ezui-layout">
   <div class="ezui-layout__header">.ezui-layout__header</div>
