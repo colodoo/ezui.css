@@ -2,7 +2,8 @@ var gulp = require('gulp'),
   less = require('gulp-less'),
   minifycss = require('gulp-minify-css'),
   concat = require('gulp-concat'),
-  rename = require('gulp-rename');
+  rename = require('gulp-rename'),
+  autoprefixer = require('gulp-autoprefixer');
 
 var cssPathArr = ['src/css/*.css', 'src/less/*.less'];
 
@@ -10,11 +11,13 @@ function css () {
   gulp.src(cssPathArr)
     .pipe(less())
     .pipe(concat('ezui.css'))
+    .pipe(autoprefixer())
     .pipe(gulp.dest('dist/css'));
 
   gulp.src(cssPathArr)
     .pipe(less())
     .pipe(concat('ezui.css'))
+    .pipe(autoprefixer())
     .pipe(minifycss())
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('dist/css'));
@@ -31,7 +34,7 @@ gulp.task('build', function () {
   css();
 });
 
-function watch() {
+function watch () {
   css();
 
   const watcher = gulp.watch(cssPathArr);
@@ -56,6 +59,6 @@ gulp.task('watch', function () {
   watch();
 });
 
-gulp.task('default', function() {
+gulp.task('default', function () {
   watch();
 });

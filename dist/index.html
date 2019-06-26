@@ -3,22 +3,27 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" name="viewport" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>ezui</title>
   <link rel="stylesheet" href="css/ezui.min.css">
 </head>
 
-<body class="ezui-body ezui-layout">
-
-  <div class="ezui-layout__content">
-    测试
+<body>
+  <style>
+    body, html {
+      height: 100%;
+    }  
+  </style>
+  <div class="ezui-layout ezui-body">
+    <div class="ezui-layout__content">
+      测试
+    </div>
+    <div class="ezui-layout__footer ezui-panel ezui-p16 ezui-center">
+      脚部
+    </div>
   </div>
-  <div class="ezui-layout__footer ezui-panel ezui-p16 ezui-center">
-    脚部
-  </div>
 
-  
   <div class="ezui-dlg" style="width: 400px; height: 300px;">
     <div class="ezui-dlg__inner ezui-dlg--active">
       <div class="ezui-dlg__title">标题</div>
@@ -38,6 +43,27 @@
       </div>
     </div>
   </div>
+
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    var winHeight = $(window).height();
+    $(window).resize(function () {
+      //当窗体大小变化时
+      var thisHeight = $(this).height();  //窗体变化后的高度
+      if (winHeight - thisHeight > 50) {
+        /*
+        软键盘弹出
+        50是设置的阈值，用来排除其他影响窗体大小变化的因素，比如有的浏览器的工具栏的显示和隐藏
+        */
+        $('body').css('height', winHeight + 'px');
+      } else {
+        /*
+        软键盘关闭
+        */
+        $('body').css('height', '100%');
+      }
+    });
+  </script>
 
 </body>
 
