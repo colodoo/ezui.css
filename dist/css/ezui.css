@@ -534,6 +534,22 @@ template {
   -webkit-box-flex: 0;
           flex: 0 0 100%;
 }
+[class*=ezui-gutter-].ezui-gutter-8 [class*=ezui-col-] {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+[class*=ezui-gutter-].ezui-gutter-16 [class*=ezui-col-] {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+[class*=ezui-gutter-] [class*=ezui-col-] {
+  box-sizing: border-box;
+}
+[class*=ezui-gutter-] [class*=ezui-col-] div,
+[class*=ezui-gutter-] [class*=ezui-col-] .ezui-col__inner {
+  height: 100%;
+  width: 100%;
+}
 
 .ezui-panel {
   background-color: #ffffff;

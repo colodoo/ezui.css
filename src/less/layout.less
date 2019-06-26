@@ -31,37 +31,77 @@
   .ezui-col-1 {
     flex: 0 0 8.33333333333333%;
   }
+
   .ezui-col-2 {
     flex: 0 0 16.66666666666667%;
   }
+
   .ezui-col-3 {
     flex: 0 0 25%;
   }
+
   .ezui-col-4 {
     flex: 0 0 33.33333333333333%;
   }
+
   .ezui-col-5 {
     flex: 0 0 41.66666666666667%;
   }
+
   .ezui-col-6 {
     flex: 0 0 50%;
   }
+
   .ezui-col-7 {
     flex: 0 0 58.33333333333333%;
   }
+
   .ezui-col-8 {
     flex: 0 0 66.66666666666667;
   }
+
   .ezui-col-9 {
     flex: 0 0 75%;
   }
+
   .ezui-col-10 {
     flex: 0 0 83.33333333333333;
   }
+
   .ezui-col-11 {
     flex: 0 0 91.66666666666667%;
   }
+
   .ezui-col-12 {
     flex: 0 0 100%;
+  }
+}
+
+// 间距
+[class*=ezui-gutter-] {
+
+  &.ezui-gutter-8 {
+    [class*=ezui-col-] {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+
+  &.ezui-gutter-16 {
+    [class*=ezui-col-] {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+
+  // 公共属性
+  [class*=ezui-col-] {
+    box-sizing: border-box;
+
+    div,
+    .ezui-col__inner {
+      height: 100%;
+      width: 100%;
+    }
   }
 }
