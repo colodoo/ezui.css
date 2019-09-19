@@ -1,4 +1,4 @@
-@import url("./variables.less");
+@import url("./variables");
 
 .ezui-btn {
   display: inline-block;
@@ -28,7 +28,7 @@
   &.ezui-btn__info {}
 
   &.ezui-btn__danger {
-    background-color: @danger !important;
+    background-color: #dc3545 !important;
     color: #ffffff;
   }
 
