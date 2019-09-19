@@ -534,19 +534,81 @@ template {
   -webkit-box-flex: 0;
           flex: 0 0 100%;
 }
-[class*=ezui-gutter-].ezui-gutter-8 [class*=ezui-col-] {
+@media (max-width: 750px) {
+  .ezui-row {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .ezui-row .ezui-col-sm {
+    -webkit-box-flex: 1;
+            flex-grow: 1;
+  }
+  .ezui-row .ezui-col-sm-1 {
+    -webkit-box-flex: 0;
+            flex: 0 0 8.33333333%;
+  }
+  .ezui-row .ezui-col-sm-2 {
+    -webkit-box-flex: 0;
+            flex: 0 0 16.66666667%;
+  }
+  .ezui-row .ezui-col-sm-3 {
+    -webkit-box-flex: 0;
+            flex: 0 0 25%;
+  }
+  .ezui-row .ezui-col-sm-4 {
+    -webkit-box-flex: 0;
+            flex: 0 0 33.33333333%;
+  }
+  .ezui-row .ezui-col-sm-5 {
+    -webkit-box-flex: 0;
+            flex: 0 0 41.66666667%;
+  }
+  .ezui-row .ezui-col-sm-6 {
+    -webkit-box-flex: 0;
+            flex: 0 0 50%;
+  }
+  .ezui-row .ezui-col-sm-7 {
+    -webkit-box-flex: 0;
+            flex: 0 0 58.33333333%;
+  }
+  .ezui-row .ezui-col-sm-8 {
+    -webkit-box-flex: 0;
+            flex: 0 0 66.66666667;
+  }
+  .ezui-row .ezui-col-sm-9 {
+    -webkit-box-flex: 0;
+            flex: 0 0 75%;
+  }
+  .ezui-row .ezui-col-sm-10 {
+    -webkit-box-flex: 0;
+            flex: 0 0 83.33333333;
+  }
+  .ezui-row .ezui-col-sm-11 {
+    -webkit-box-flex: 0;
+            flex: 0 0 91.66666667%;
+  }
+  .ezui-row .ezui-col-sm-12 {
+    -webkit-box-flex: 0;
+            flex: 0 0 100%;
+  }
+}
+[class*=ezui-gutter].ezui-gutter-8 [class*=ezui-col] {
   padding-left: 8px;
   padding-right: 8px;
 }
-[class*=ezui-gutter-].ezui-gutter-16 [class*=ezui-col-] {
+[class*=ezui-gutter].ezui-gutter-16 [class*=ezui-col] {
   padding-left: 16px;
   padding-right: 16px;
 }
-[class*=ezui-gutter-] [class*=ezui-col-] {
+[class*=ezui-col] {
   box-sizing: border-box;
 }
-[class*=ezui-gutter-] [class*=ezui-col-] div,
-[class*=ezui-gutter-] [class*=ezui-col-] .ezui-col__inner {
+[class*=ezui-col] div,
+[class*=ezui-col] .ezui-col__inner {
   height: 100%;
   width: 100%;
 }

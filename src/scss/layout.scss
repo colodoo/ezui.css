@@ -1,16 +1,16 @@
-@col-1: 0 0 8.33333333333333%;
-@col-2: 0 0 16.66666666666667%;
-@col-3: 0 0 25%;
-@col-4: 0 0 33.33333333333333%;
-@col-5: 0 0 41.66666666666667%;
-@col-6: 0 0 50%;
-@col-7: 0 0 58.33333333333333%;
-@col-8: 0 0 66.66666666666667;
-@col-9: 0 0 75%;
-@col-10: 0 0 83.33333333333333;
-@col-11: 0 0 91.66666666666667%;
-@col-12: 0 0 100%;
-@col_list: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+$col-1: 0 0 8.33333333333333%;
+$col-2: 0 0 16.66666666666667%;
+$col-3: 0 0 25%;
+$col-4: 0 0 33.33333333333333%;
+$col-5: 0 0 41.66666666666667%;
+$col-6: 0 0 50%;
+$col-7: 0 0 58.33333333333333%;
+$col-8: 0 0 66.66666666666667;
+$col-9: 0 0 75%;
+$col-10: 0 0 83.33333333333333;
+$col-11: 0 0 91.66666666666667%;
+$col-12: 0 0 100%;
+$col_list: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
 
 .ezui-body {
   background-color: #f8f8f8;
@@ -43,51 +43,51 @@
 
   // 网格
   .ezui-col-1 {
-    flex: @col-1;
+    flex: $col-1;
   }
 
   .ezui-col-2 {
-    flex: @col-2;
+    flex: $col-2;
   }
 
   .ezui-col-3 {
-    flex: @col-3;
+    flex: $col-3;
   }
 
   .ezui-col-4 {
-    flex: @col-4;
+    flex: $col-4;
   }
 
   .ezui-col-5 {
-    flex: @col-5;
+    flex: $col-5;
   }
 
   .ezui-col-6 {
-    flex: @col-6;
+    flex: $col-6;
   }
 
   .ezui-col-7 {
-    flex: @col-7;
+    flex: $col-7;
   }
 
   .ezui-col-8 {
-    flex: @col-8;
+    flex: $col-8;
   }
 
   .ezui-col-9 {
-    flex: @col-9;
+    flex: $col-9;
   }
 
   .ezui-col-10 {
-    flex: @col-10;
+    flex: $col-10;
   }
 
   .ezui-col-11 {
-    flex: @col-11;
+    flex: $col-11;
   }
 
   .ezui-col-12 {
-    flex: @col-12;
+    flex: $col-12;
   }
 }
 
@@ -104,51 +104,51 @@
 
     // 网格
     .ezui-col-sm-1 {
-      flex: @col-1;
+      flex: $col-1;
     }
 
     .ezui-col-sm-2 {
-      flex: @col-2;
+      flex: $col-2;
     }
 
     .ezui-col-sm-3 {
-      flex: @col-3;
+      flex: $col-3;
     }
 
     .ezui-col-sm-4 {
-      flex: @col-4;
+      flex: $col-4;
     }
 
     .ezui-col-sm-5 {
-      flex: @col-5;
+      flex: $col-5;
     }
 
     .ezui-col-sm-6 {
-      flex: @col-6;
+      flex: $col-6;
     }
 
     .ezui-col-sm-7 {
-      flex: @col-7;
+      flex: $col-7;
     }
 
     .ezui-col-sm-8 {
-      flex: @col-8;
+      flex: $col-8;
     }
 
     .ezui-col-sm-9 {
-      flex: @col-9;
+      flex: $col-9;
     }
 
     .ezui-col-sm-10 {
-      flex: @col-10;
+      flex: $col-10;
     }
 
     .ezui-col-sm-11 {
-      flex: @col-11;
+      flex: $col-11;
     }
 
     .ezui-col-sm-12 {
-      flex: @col-12;
+      flex: $col-12;
     }
   }
 }
